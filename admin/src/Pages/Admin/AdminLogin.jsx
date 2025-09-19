@@ -15,7 +15,7 @@ const AdminLogin = () => {
     setError("");
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/auth/login", {
+      const res = await axios.post("https://subscription-management-bn9p.onrender.com/auth/login", {
         email,
         password,
       });

@@ -24,10 +24,10 @@ const Dashboard = () => {
       const token = localStorage.getItem("token");
 
       const [usersRes, plansRes, subsRes, connectionsRes] = await Promise.all([
-        axios.get("http://localhost:5000/admin/users", { headers: { "auth-token": token } }),
-        axios.get("http://localhost:5000/admin/plans", { headers: { "auth-token": token } }),
-        axios.get("http://localhost:5000/admin/subscriptions", { headers: { "auth-token": token } }),
-        axios.get("http://localhost:5000/admin/connections", { headers: { "auth-token": token } }),
+        axios.get("https://subscription-management-bn9p.onrender.com/admin/users", { headers: { "auth-token": token } }),
+        axios.get("https://subscription-management-bn9p.onrender.com/admin/plans", { headers: { "auth-token": token } }),
+        axios.get("https://subscription-management-bn9p.onrender.com/admin/subscriptions", { headers: { "auth-token": token } }),
+        axios.get("https://subscription-management-bn9p.onrender.com/admin/connections", { headers: { "auth-token": token } }),
       ]);
 
       const users = usersRes.data || [];

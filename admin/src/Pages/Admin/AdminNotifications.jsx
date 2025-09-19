@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../CSS/AdminNotifications.css";
 
-const API_BASE = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const API_BASE = process.env.REACT_APP_API_URL || "https://subscription-management-bn9p.onrender.com";
 
 const AdminNotifications = () => {
   const [message, setMessage] = useState("");

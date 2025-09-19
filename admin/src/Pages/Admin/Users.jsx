@@ -16,7 +16,7 @@ const Users = () => {
   // Fetch users (memoized)
   const fetchUsers = useCallback(async () => {
     try {
-      const res = await axios.get("http://localhost:5000/admin/users", {
+      const res = await axios.get("https://subscription-management-bn9p.onrender.com/admin/users", {
         headers: { "auth-token": token },
       });
       setUsers(res.data);
@@ -57,7 +57,7 @@ const Users = () => {
   const handleBlock = async (id) => {
     try {
       await axios.patch(
-        `http://localhost:5000/admin/users/${id}/block`,
+        `https://subscription-management-bn9p.onrender.com/admin/users/${id}/block`,
         {},
         { headers: { "auth-token": token } }
       );
@@ -71,7 +71,7 @@ const Users = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this user?")) return;
     try {
-      await axios.delete(`http://localhost:5000/admin/users/${id}`, {
+      await axios.delete(`https://subscription-management-bn9p.onrender.com/admin/users/${id}`, {
         headers: { "auth-token": token },
       });
       fetchUsers();
@@ -84,7 +84,7 @@ const Users = () => {
   const handleUpdate = async () => {
     try {
       await axios.put(
-        `http://localhost:5000/admin/users/${editUser._id}`,
+        `https://subscription-management-bn9p.onrender.com/admin/users/${editUser._id}`,
         editUser,
         { headers: { "auth-token": token } }
       );
@@ -98,7 +98,7 @@ const Users = () => {
   // Create
   const handleCreate = async () => {
     try {
-      await axios.post("http://localhost:5000/auth/register", editUser, {
+      await axios.post("https://subscription-management-bn9p.onrender.com/auth/register", editUser, {
         headers: { "auth-token": token },
       });
       setNewUserModal(false);

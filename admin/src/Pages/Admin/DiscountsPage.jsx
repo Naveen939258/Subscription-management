@@ -24,7 +24,7 @@ const DiscountsPage = () => {
 
   const fetchDiscounts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/discounts");
+      const res = await axios.get("https://subscription-management-bn9p.onrender.com/api/discounts");
       setDiscounts(res.data);
     } catch (err) {
       console.error(err);
@@ -33,7 +33,7 @@ const DiscountsPage = () => {
 
   const fetchStats = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/discounts/stats");
+      const res = await axios.get("https://subscription-management-bn9p.onrender.com/api/discounts/stats");
       setStats(res.data);
     } catch (err) {
       console.error(err);
@@ -57,12 +57,12 @@ const DiscountsPage = () => {
 
       const token = localStorage.getItem("token");
       if (editingId) {
-        await axios.put(`http://localhost:5000/api/discounts/${editingId}`, payload, {
+        await axios.put(`https://subscription-management-bn9p.onrender.com/api/discounts/${editingId}`, payload, {
           headers: { "auth-token": token },
         });
         alert("✅ Discount updated successfully");
       } else {
-        await axios.post("http://localhost:5000/api/discounts", payload, {
+        await axios.post("https://subscription-management-bn9p.onrender.com/api/discounts", payload, {
           headers: { "auth-token": token },
         });
         alert("✅ Discount created successfully");
@@ -102,7 +102,7 @@ const DiscountsPage = () => {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/api/discounts/${id}`, {
+      await axios.delete(`https://subscription-management-bn9p.onrender.com/api/discounts/${id}`, {
         headers: { "auth-token": token },
       });
       setDiscounts((prev) => prev.filter((d) => d._id !== id));

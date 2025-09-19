@@ -21,7 +21,7 @@ const Plans = () => {
   // Fetch plans
   const fetchPlans = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/admin/plans", {
+      const res = await axios.get("https://subscription-management-bn9p.onrender.com/admin/plans", {
         headers: { "auth-token": localStorage.getItem("token") },
       });
       setPlans(res.data);
@@ -34,7 +34,7 @@ const Plans = () => {
   // Fetch stats (total subscribers & revenue for this month)
   const fetchStats = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/admin/stats/plans", {
+      const res = await axios.get("https://subscription-management-bn9p.onrender.com/admin/stats/plans", {
         headers: { "auth-token": localStorage.getItem("token") },
       });
       setStats(res.data);
@@ -68,12 +68,12 @@ const Plans = () => {
       };
 
       if (editingId) {
-        await axios.put(`http://localhost:5000/admin/plans/${editingId}`, payload, {
+        await axios.put(`https://subscription-management-bn9p.onrender.com/admin/plans/${editingId}`, payload, {
           headers: { "auth-token": localStorage.getItem("token") },
         });
         alert("✅ Plan updated successfully");
       } else {
-        await axios.post("http://localhost:5000/admin/plans", payload, {
+        await axios.post("https://subscription-management-bn9p.onrender.com/admin/plans", payload, {
           headers: { "auth-token": localStorage.getItem("token") },
         });
         alert("✅ Plan added successfully");
@@ -116,7 +116,7 @@ const Plans = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/admin/plans/${id}`, {
+      await axios.delete(`https://subscription-management-bn9p.onrender.com/admin/plans/${id}`, {
         headers: { "auth-token": localStorage.getItem("token") },
       });
       setPlans((prev) => prev.filter((p) => p._id !== id));

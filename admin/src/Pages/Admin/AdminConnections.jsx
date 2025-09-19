@@ -22,7 +22,7 @@ const AdminConnections = () => {
   // Fetch all connections
   const fetchConnections = useCallback(async () => {
   try {
-    const res = await axios.get("http://localhost:5000/admin/connections", {
+    const res = await axios.get("https://subscription-management-bn9p.onrender.com/admin/connections", {
       headers: { "auth-token": token },
     });
     setConnections(res.data);
@@ -64,7 +64,7 @@ const AdminConnections = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this connection?")) return;
     try {
-      await axios.delete(`http://localhost:5000/admin/connections/${id}`, {
+      await axios.delete(`https://subscription-management-bn9p.onrender.com/admin/connections/${id}`, {
         headers: { "auth-token": token },
       });
       fetchConnections();
@@ -77,7 +77,7 @@ const AdminConnections = () => {
   const handleUpdate = async () => {
     try {
       await axios.put(
-        `http://localhost:5000/admin/connections/${editConn._id}`,
+        `https://subscription-management-bn9p.onrender.com/admin/connections/${editConn._id}`,
         editConn,
         { headers: { "auth-token": token } }
       );

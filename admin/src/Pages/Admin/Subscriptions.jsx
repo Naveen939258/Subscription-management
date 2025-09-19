@@ -24,7 +24,7 @@ const AdminSubscriptions = () => {
   // Fetch all subscriptions
 const fetchSubscriptions = useCallback(async () => {
   try {
-    const res = await axios.get("http://localhost:5000/admin/subscriptions", {
+    const res = await axios.get("https://subscription-management-bn9p.onrender.com/admin/subscriptions", {
       headers: { "auth-token": token },
     });
     setSubscriptions(res.data);
@@ -71,7 +71,7 @@ const fetchSubscriptions = useCallback(async () => {
   // Cancel subscription
   const handleCancel = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/admin/subscription/${id}`, {
+      await axios.delete(`https://subscription-management-bn9p.onrender.com/admin/subscription/${id}`, {
         headers: { "auth-token": token },
       });
       fetchSubscriptions();
@@ -85,7 +85,7 @@ const fetchSubscriptions = useCallback(async () => {
   const handleEditSave = async () => {
     try {
       const { _id, ...data } = editData;
-      await axios.put(`http://localhost:5000/admin/subscription/${_id}`, data, {
+      await axios.put(`https://subscription-management-bn9p.onrender.com/admin/subscription/${_id}`, data, {
         headers: { "auth-token": token },
       });
       fetchSubscriptions();
