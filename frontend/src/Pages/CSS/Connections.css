@@ -1,0 +1,464 @@
+/* =============================
+   Connections Page Container
+============================= */
+.connections-page {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #1e293b;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+  color: #fff;
+}
+
+/* =============================
+   Top Section
+============================= */
+.connections-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.connections-top h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.connections-top p {
+  margin: 4px 0 0;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+/* =============================
+   Grid for Cards
+============================= */
+.connections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+/* =============================
+   Connection Card
+============================= */
+.connection-card {
+  background: #1e293b;;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  transition: 0.3s all ease;
+}
+
+.connection-card:hover {
+  border-color: #007bff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.status {
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: #508ecc;
+  color: #faf8f8;
+}
+
+/* Meta info */
+.meta {
+  font-size: 0.9rem;
+  color: #e7e6e6;
+  margin: 4px 0;
+}
+
+/* Subscription info */
+.sub-info {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.sub-info strong {
+  color: #007bff;
+}
+
+/* =============================
+   Actions
+============================= */
+.card-actions {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card-actions a,
+.card-actions button {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Primary button */
+.btn-primary {
+  background: #007bff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+/* Outline button */
+.btn-outline {
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: #070a07;
+}
+
+/* Danger button */
+.btn-danger {
+  background: #dc3545;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-danger:hover {
+  background: #c82333;
+}
+
+/* Link button */
+.btn-link {
+  color: #007bff;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+/* =============================
+   History Table
+============================= */
+.history-box h4.history-heading {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff; /* since your theme is dark */
+  border-bottom: 1px solid #444;
+  padding-bottom: 4px;
+}
+
+.history-box {
+  margin-top: 16px;
+  overflow-x: auto;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.history-table th,
+.history-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.history-table th {
+  background: #0f52ba;
+  font-weight: 600;
+}
+
+.history-table tr:nth-child(even) {
+  background: #fdfdfd;
+}
+
+/* =============================
+   Add Connection Box
+============================= */
+/* =============================
+   Add Connection Box
+============================= */
+.add-box {
+  background: #f9fafb; /* light background for contrast */
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* =============================
+   Address Cards (inside form)
+============================= */
+.connections-address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.address-card {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 15px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s all ease;
+  position: relative;
+}
+
+.address-card:hover {
+  border-color: #007bff;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.15);
+}
+
+.address-card.selected {
+  border-color: #007bff;
+  box-shadow: 0 2px 10px rgba(0, 123, 255, 0.25);
+}
+
+.address-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.default-tag {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.address-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.address-actions button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+
+.address-actions button:hover {
+  opacity: 0.85;
+}
+
+.address-actions button:first-child {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.address-actions button:last-child {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.add-new-btn {
+  margin-top: 15px;
+  padding: 6px 10px;      /* smaller padding */
+  font-size: 12px;        /* smaller font */
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+
+.add-new-btn:hover {
+  background-color: #218838;
+}
+
+/* =============================
+   Address Form Styling
+============================= */
+.address-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.address-form input,
+.address-form select {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.2s all ease;
+}
+
+.address-form input:focus,
+.address-form select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.address-form label {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: #555;
+}
+
+.address-form button {
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+
+.address-form button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.address-form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.address-form button[type="button"] {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.address-form button[type="button"]:hover {
+  background-color: #5a6268;
+}
+
+/* =============================
+   Buttons (general)
+============================= */
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+.btn-danger {
+  background: #ef4444;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-danger:hover {
+  background: #dc2626;
+}
+
+/* =============================
+   Empty state
+============================= */
+.empty-box {
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 28px;
+  text-align: center;
+  color: #4b5563;
+  font-size: 0.95rem;
+  border: 1px dashed #cbd5e1;
+}
+
+/* =============================
+   Responsive
+============================= */
+@media (max-width: 768px) {
+  .connections-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .connections-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,63 @@
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: linear-gradient(180deg, #1e293b, #0f172a); /* Royal gradient */
+  color: white;
+  padding: 25px 20px;
+  box-sizing: border-box;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #facc15; /* gold touch */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 18px;
+}
+
+.sidebar ul li a {
+  display: block;
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #facc15; /* royal gold hover */
+}
+
+.sidebar ul li a.active {
+  background: #facc15;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* Discounts link full gold style */
+.discount-link {
+  text-transform: lowercase; 
+  color: #facc15 !important; /* gold text */
+  font-weight: 600;
+}
+
+.discount-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #facc15 !important;
+}

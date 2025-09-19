@@ -1,0 +1,119 @@
+/* Full Page Wrapper */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Card */
+.login-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 40px 50px;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6),
+              0 0 20px rgba(255, 215, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Title */
+.login-card h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ffd700, #fbbf24, #fff176);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* Error Box */
+.login-error {
+  background: rgba(255, 0, 0, 0.2);
+  color: #ff8080;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.login-form label {
+  text-align: left;
+  font-size: 15px;
+  font-weight: 500;
+  color: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Inputs */
+.login-form input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.login-form input::placeholder {
+  color: #d1d5db;
+}
+
+/* Button */
+.login-btn {
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #1a1a1a;
+  background: linear-gradient(90deg, #fcd34d, #fbbf24, #f59e0b);
+  box-shadow: 0 6px 18px rgba(251, 191, 36, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(251, 191, 36, 0.7);
+}
+
+/* Note */
+.login-note {
+  font-size: 13px;
+  color: #cbd5e1;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

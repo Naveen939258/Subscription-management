@@ -1,0 +1,348 @@
+.dashboard-page {
+  padding: 30px;
+  background: radial-gradient(circle at top, #0f172a, #1e293b, #111827);
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+/* Top Welcome Section */
+.dashboard-top {
+  background: linear-gradient(135deg, rgba(37,99,235,0.9), rgba(59,130,246,0.9));
+  color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.dashboard-top h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.dashboard-top p {
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+.user-info {
+  background: rgba(255,255,255,0.15);
+  padding: 15px 20px;
+  border-radius: 14px;
+  text-align: right;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.user-info h3{
+  text-align: center;
+}
+/* Stats Grid */
+.stats {
+  padding: 50px 20px;
+  text-align: center;
+  min-height: 60vh;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  background-size: 100% 100%;
+  animation: statsBG 18s ease infinite;
+  color: #fff;
+  border-radius: 20px;
+  margin: 40px auto;
+}
+
+@keyframes statsBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.stats h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #ffd700, #ffb800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Responsive Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* default (phones) */
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr); /* tablets */
+  }
+}
+
+@media (min-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr); /* desktops */
+  }
+}
+
+/* Polished Gold Stat Cards */
+.stat-card {
+  border-radius: 14px;
+  padding: 28px 20px;
+  text-align: center;
+  background: linear-gradient(145deg, #fef9ef, #ffe8b0);
+  box-shadow: 0 6px 18px rgba(255, 215, 0, 0.35);
+  color: #1e1e1e;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(255, 215, 0, 0.5);
+}
+
+/* Numbers */
+.stat-card h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #b8860b; /* dark goldenrod */
+  margin-bottom: 10px;
+}
+
+/* Labels */
+.stat-card p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0f0f0f;
+  opacity: 0.9;
+}
+
+
+.stat-card h2 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+
+
+/* Colors */
+.stat-card.blue h2 { color: #60a5fa; }
+.stat-card.green h2 { color: #4ade80; }
+.stat-card.yellow h2 { color: #facc15; }
+.stat-card.cyan h2 { color: #22d3ee; }
+
+/* Current Plan */
+.current-plan {
+  background: rgba(30, 41, 59, 0.85);
+  padding: 40px;
+  border-radius: 20px;
+  margin: 50px auto;
+  max-width: 1000px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  backdrop-filter: blur(12px);
+}
+
+.current-plan h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #f0f9ff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.plan-box {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Circle + details */
+  align-items: center;
+  gap: 50px;
+}
+
+@media (max-width: 768px) {
+  .plan-box {
+    grid-template-columns: 1fr; /* Stack for small screens */
+    gap: 30px;
+    text-align: center;
+  }
+}
+
+/* Progress Circle with animation */
+/* Circle with Progress Ring */
+.circle-progress {
+  --progress: 0;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  position: relative;
+  
+  /* Creates the glowing background for the ring */
+  box-shadow: 0 0 18px var(--circle-color);
+  
+  /* Fills the entire circle for the progress */
+  background: conic-gradient(
+    var(--circle-color) calc(var(--progress) * 1%),
+    #374151 0
+  );
+  animation: fillProgress 2s ease-out forwards;
+}
+
+/* This is the key change: creates a transparent inner circle to make it a ring */
+.circle-progress::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140px; /* Adjust this to control the thickness of the ring */
+  height: 140px;
+  background: #111827; /* Must match the dashboard background color */
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Optional inner shadow for depth */
+}
+
+.circle-progress span {
+  /* No solid background, it's just text */
+  background: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  z-index: 2; /* Ensures the text is on top of the hole */
+  position: absolute;
+  padding: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes fillProgress {
+  from { --progress: 0; }
+  to { --progress: var(--target-progress); }
+}
+
+/* Circle color vars */
+.circle-progress.green { --circle-color: #22c55e; }
+.circle-progress.orange { --circle-color: #f97316; }
+.circle-progress.red { --circle-color: #ef4444; }
+.plan-details {
+  padding: 20px;
+}
+
+.plan-details h3 {
+  font-size: 1.7rem;
+  color: #38bdf8;
+  margin-bottom: 8px;
+}
+
+.plan-details .plan-price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #facc15;
+  margin-bottom: 12px;
+}
+
+.plan-details p {
+  margin: 4px 0;
+  font-size: 1rem;
+  color: #e2e8f0;
+}
+
+.plan-meta {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+.plan-features {
+  margin-top: 14px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.plan-features li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #86efac;
+}
+
+
+/* Recommendations */
+.recommendations h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #f0f9ff;
+}
+
+.recommendations .badge {
+  background: #6366f1;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+
+.recs-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.rec-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  flex: 1;
+  min-width: 220px;
+  position: relative;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.rec-card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+.rec-header .match {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 0.8rem;
+  color: #60a5fa;
+  background: #1e40af;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.rec-card h3 {
+  margin-top: 14px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.upgrade-btn {
+  margin-top: 14px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.upgrade-btn:hover {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  box-shadow: 0 6px 18px rgba(34,197,94,0.3);
+}

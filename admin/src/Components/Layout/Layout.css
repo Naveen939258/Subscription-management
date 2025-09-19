@@ -1,0 +1,58 @@
+/* NAVBAR */
+.navbar {
+  height: 60px;
+  background: #1e293b;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed; /* make navbar fixed */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* stay above other elements */
+}
+
+.navbar-title {
+  font-size: 18px;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: linear-gradient(180deg, #1e293b, #0f172a);
+  color: white;
+  padding: 25px 20px;
+  box-sizing: border-box;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  position: fixed; /* make sidebar fixed */
+  top: 60px; /* push down below navbar */
+  left: 0;
+  z-index: 999;
+  overflow-y: auto;
+}
+
+/* LAYOUT */
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.layout-body {
+  display: flex;
+  flex: 1;
+  margin-top: 60px; /* content starts below navbar */
+}
+
+.layout-content {
+  flex: 1;
+  padding: 20px;
+  background: #f1f5f9;
+  overflow-y: auto;
+  margin-left: 220px; /* leave space for sidebar */
+}

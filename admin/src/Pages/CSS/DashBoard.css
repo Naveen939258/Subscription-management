@@ -1,0 +1,135 @@
+/* Page Background */
+.dashboard-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.dashboard-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.dashboard-header h2 {
+  font-size: 32px;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.dashboard-header p {
+  font-size: 15px;
+  color: #cbd5e1;
+}
+
+/* Actions Row */
+.dashboard-actions {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 900px;
+  justify-content: center;
+}
+
+/* Action Cards */
+.action-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Action Card Icon */
+.action-icon {
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+/* Action Titles */
+.action-card h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.action-card p {
+  font-size: 14px;
+  color: #d1d5db;
+  margin-bottom: 18px;
+}
+
+/* Buttons */
+.action-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.create-btn {
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  color: #fff;
+}
+
+.manage-btn {
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  color: #fff;
+}
+
+.action-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Stat Card */
+.stat-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.stat-card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #f3f4f6;
+}
+
+.stat-card p {
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #fcd34d, #fbbf24, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

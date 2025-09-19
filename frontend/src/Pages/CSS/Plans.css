@@ -1,0 +1,240 @@
+.plans-page {
+  padding: 30px;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: white;
+  min-height: 100vh;
+}
+
+/* Header + Tabs */
+.plans-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.plans-header h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.top-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.top-tabs button {
+  padding: 8px 16px;   /* smaller buttons */
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.top-tabs button.active {
+  background: #1e40af;
+}
+
+.top-tabs button.highlight {
+  background: #9333ea; /* purple when items selected */
+}
+
+.top-tabs button:hover {
+  background: #1e3a8a;
+  transform: scale(1.05);
+}
+
+/* Plans Grid */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Plan Card */
+.plan-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  background: #1e293b;
+}
+
+.plan-card-top {
+  background: linear-gradient(135deg, #6c5ce7, #9b59b6);
+  padding: 20px;
+  text-align: center;
+}
+
+.plan-card-top h3 {
+  margin-bottom: 8px;
+}
+
+.plan-price {
+  font-size: 28px;
+  font-weight: 800;
+  transition: transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+.plan-price:hover {
+  transform: scale(1.1);
+  text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.9);
+}
+
+.plan-card-bottom {
+  padding: 20px;
+  background: #111827;
+  color: #f3f4f6;
+}
+
+.plan-desc {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+/* Actions */
+.plan-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.plan-actions button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.plan-actions button:hover {
+  transform: scale(1.05);
+}
+
+.subscribe-btn {
+  background: #16a34a;
+  color: white;
+}
+
+.compare-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.details-btn {
+  background: #6b7280;
+  color: white;
+}
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+/* Modal Box */
+.modal {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  width: 420px;
+  max-width: 95%;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Modal Header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #1e3a8a;
+}
+
+.modal-header button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Modal Body */
+.modal-body {
+  margin-bottom: 20px;
+}
+
+.modal-body p {
+  margin: 6px 0;
+  color: #374151;
+}
+
+.modal-body .plan-desc {
+  margin-top: 10px;
+  font-style: italic;
+  color: #555;
+}
+
+.plan-features {
+  margin: 12px 0;
+  padding-left: 16px;
+}
+
+/* Modal Actions */
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cancel-btn {
+  background: #e5e7eb;
+  color: #111827;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background: #d1d5db;
+}
+/* ✅ Connection Modal Styling */
+.connection-option {
+  border-radius: 8px;
+  background: #f3f4f6;
+  color: #111827;
+  padding: 12px;
+  margin: 6px 0;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.connection-option:hover {
+  background: #e0e7ff;
+  transform: scale(1.02);
+}
+
+.connection-option strong {
+  font-weight: 600;
+}

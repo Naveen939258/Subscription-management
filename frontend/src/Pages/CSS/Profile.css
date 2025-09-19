@@ -1,0 +1,85 @@
+.profile-page {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Avatar Circle */
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0 auto 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.profile-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #1a1c2c;
+}
+
+.profile-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.profile-card p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.profile-card input {
+  width: 100%;
+  margin: 0.6rem 0;
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.edit-btn {
+  background: #6366f1;
+  color: white;
+  font-size: 0.85rem;
+  padding: 0.4rem 1rem;
+}
+
+.save-btn {
+  background: #22c55e;
+  color: white;
+}
+
+.cancel-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}

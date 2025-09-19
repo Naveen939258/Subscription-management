@@ -1,0 +1,182 @@
+/* Navbar container */
+nav {
+  background: linear-gradient(90deg, #1a1c2c, #383d62);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+nav h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff00cc, #3333ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+/* Middle links */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-links li a {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links li a:hover {
+  color: white;
+}
+
+/* ---------- Right Side (logged in) ---------- */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem; /* space between avatar and logout */
+}
+
+/* Profile avatar circle */
+.profile-avatar1{
+  width: 46px !important;   /* force width */
+  height: 45px !important;  /* force height */
+  border-radius: 50% !important;
+  background-color: #4a90e2 !important;
+  color: white;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  overflow: hidden;
+  flex: 0 0 auto !important;  /* prevent flexbox from stretching */
+  cursor: pointer;
+}
+
+
+
+
+.profile-avatar:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Logout button */
+.logout-btn {
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0 1rem;
+  height: 36px;   /* pill button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.logout-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* ---------- Right Side (not logged in) ---------- */
+.nav-auth {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-auth li {
+  list-style: none;
+}
+
+.nav-auth li a {
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-auth li a:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+/* Bell Icon */
+.notification-wrapper {
+  position: relative;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.bell-icon {
+  font-size: 22px;
+  color: #f5f4f4;
+}
+
+.notif-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: red;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* Dropdown */
+.notif-dropdown {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 250px;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.notif-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.notif-item.read {
+  color: #777;
+}
+
+.no-notif {
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+}

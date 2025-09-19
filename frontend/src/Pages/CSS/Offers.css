@@ -1,0 +1,74 @@
+.offers-page {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  min-height: 80vh;
+  color: #fff;
+}
+
+.offers-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Apply gradient only to text inside span */
+.offers-title .gradient-text {
+  background: linear-gradient(90deg, #ffd700, #ffb800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.offers-subtitle {
+  font-size: 1.1rem;
+  color: #dcd6f7;
+  margin-bottom: 40px;
+}
+
+.offers-container {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.offer-card {
+  background: linear-gradient(145deg, #ff6a00, #ee0979);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  padding: 24px;
+  width: 280px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #fff;
+  text-align: center;
+}
+
+.offer-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.6);
+}
+
+.offer-card h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.offer-card p {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.offer-card small {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.offer-code {
+  margin-top: 10px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  font-weight: 600;
+  font-size: 14px;
+}

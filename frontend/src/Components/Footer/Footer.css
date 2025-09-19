@@ -1,0 +1,78 @@
+/* =============================
+   Footer (Compact MyJio Style)
+============================= */
+.footer {
+  background: linear-gradient(90deg, #1a1c2c, #383d62);
+  padding: 25px 50px; /* reduced from 50px 80px */
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #222;
+}
+
+/* Grid layout for top section */
+.footer-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 25px; /* reduced from 40px */
+  margin-bottom: 20px; /* reduced from 40px */
+}
+
+.footer-column h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px; /* reduced */
+  color: #f7f6f6;
+}
+
+.footer-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 6px; /* reduced from 10px */
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  font-size: 13px; /* slightly smaller */
+  color: #fbfbfc;
+  transition: color 0.2s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #0078ff;
+}
+
+/* Social icons */
+.social-icons {
+  text-align: center;
+  margin-bottom: 8px; /* reduced */
+}
+
+.social-icons a {
+  font-size: 18px; /* reduced from 22px */
+  margin: 0 6px; /* tighter spacing */
+  color: #f2f2f3;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: #005ec2;
+}
+
+/* Bottom text */
+.footer-bottom {
+  text-align: center;
+  font-size: 12px; /* smaller */
+  color: #fcf9f9;
+  border-top: 1px solid #444; /* subtle divider */
+  padding-top: 10px; /* reduced */
+}
+
+.sub-text {
+  font-size: 11px;
+  color: #f8f7f7;
+  margin-top: 3px;
+}
