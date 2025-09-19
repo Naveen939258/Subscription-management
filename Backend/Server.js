@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
@@ -11,12 +14,11 @@ app.use(cors());
 app.use(express.json());
 
 // -------------------- CONFIG --------------------
-const MONGO_URI =
-  "mongodb+srv://2200031998_db_user:Naveen123@cluster0.skcafxl.mongodb.net/subscriptions";
-const JWT_SECRET = "mysecretjwt";
-const RAZORPAY_KEY_ID = "rzp_test_R96AoZfyvLuRMy"; // replace with your Razorpay key
-const RAZORPAY_KEY_SECRET = "ePJK27ObR8vU76gMv3G3VoX1"; // replace with your Razorpay secret
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
+const MONGO_URI = process.env.MONGO_URI;
+const JWT_SECRET = process.env.JWT_SECRET;
+const RAZORPAY_KEY_ID = process.env.RAZORPAY_KEY_ID;
+const RAZORPAY_KEY_SECRET = process.env.RAZORPAY_KEY_SECRET;
 
 // -------------------- DB CONNECTION --------------------
 mongoose
