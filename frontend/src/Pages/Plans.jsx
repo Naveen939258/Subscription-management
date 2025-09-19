@@ -24,7 +24,7 @@ const UserPlans = () => {
   useEffect(() => {
     const fetchPlans = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/plans");
+        const res = await axios.get("https://subscription-management-bn9p.onrender.com/plans");
         setPlans(res.data);
       } catch (err) {
         console.error("❌ Error fetching plans:", err.message);
@@ -38,7 +38,7 @@ const UserPlans = () => {
   useEffect(() => {
     const fetchConnections = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/connection/my", {
+        const res = await axios.get("https://subscription-management-bn9p.onrender.com/connection/my", {
           headers: { "auth-token": token },
         });
         setConnections(res.data || []);

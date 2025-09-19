@@ -26,7 +26,7 @@ const LoginSignup = () => {
         ? { ...formData, isAdmin: false } // default user
         : { email: formData.email, password: formData.password };
 
-      const res = await fetch(`http://127.0.0.1:5000/${endpoint}`, {
+      const res = await fetch(`https://subscription-management-bn9p.onrender.com/${endpoint}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

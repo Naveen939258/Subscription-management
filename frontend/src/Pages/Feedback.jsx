@@ -15,7 +15,7 @@ const Feedback = () => {
 
     try {
       // API call to save feedback
-      await axios.post("http://localhost:5000/api/feedback", {
+      await axios.post("https://subscription-management-bn9p.onrender.com/api/feedback", {
         name,
         email,
         feedback,

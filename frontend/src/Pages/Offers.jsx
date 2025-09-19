@@ -11,7 +11,7 @@ const Offers = () => {
 
   const fetchOffers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/discounts");
+      const res = await axios.get("https://subscription-management-bn9p.onrender.com/api/discounts");
       // Only active offers
       setOffers(res.data.filter((o) => o.isActive));
     } catch (err) {

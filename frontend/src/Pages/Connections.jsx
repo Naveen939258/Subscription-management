@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import AddressForm from "./AddressForm.jsx";
 import "./CSS/Connections.css";
 
-const API_BASE = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const API_BASE = process.env.REACT_APP_API_URL || "https://subscription-management-bn9p.onrender.com";
 
 // --- Individual Connection Card ---
 function ConnectionCard({ connection, refresh, onToggleHistory, isHistoryVisible, onEdit, onDelete }) {

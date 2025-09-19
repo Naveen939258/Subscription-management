@@ -12,7 +12,7 @@ const Profile = () => {
   // Fetch profile
  const fetchProfile = useCallback(async () => {
   try {
-    const res = await axios.get("http://localhost:5000/auth/me", {
+    const res = await axios.get("https://subscription-management-bn9p.onrender.com/auth/me", {
       headers: { "auth-token": token },
     });
     setUser(res.data);
@@ -36,7 +36,7 @@ const Profile = () => {
 
     try {
       const res = await axios.put(
-        "http://localhost:5000/auth/me",
+        "https://subscription-management-bn9p.onrender.com/auth/me",
         { ...formData, currentPassword },
         { headers: { "auth-token": token } }
       );

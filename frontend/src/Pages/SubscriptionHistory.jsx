@@ -9,7 +9,7 @@ const SubscriptionHistory = () => {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/subscription/my", {
+        const res = await axios.get("https://subscription-management-bn9p.onrender.com/subscription/my", {
           headers: { "auth-token": token },
         });
         setHistory(res.data || []);
