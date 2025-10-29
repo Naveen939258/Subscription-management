@@ -24,7 +24,7 @@ This platform simplifies the management of broadband and mobile subscriptions fo
 
 ### 👤 User Module
 - Secure user registration & authentication (JWT-based)
-- Browse available plans and view detailed information
+- Browse available plans and view detailed information and compare plans
 - Subscribe securely using Razorpay payment gateway
 - Apply promo codes for instant discounts
 - Manage multiple connections (add, edit, delete)
@@ -98,11 +98,11 @@ This platform simplifies the management of broadband and mobile subscriptions fo
 ---
 
 ## 📸 Screenshots
-- 🏠 User Dashboard: Click Here
-- 📋 Plans Page: Click Here
-- 💰 Promo Code & Payment: Click Here
-- 🧾 Billing History: Click Here
-- 🛠 Admin Dashboard: Click Here
+- 🏠 **User Dashboard:** [Click Here](https://subscriptionuser.netlify.app/dashboard)
+- 📋 **Plans Page:** [Click Here](https://subscriptionuser.netlify.app/plans)
+- 💰 **Promo Code & Payment:** [Click Here](https://subscriptionuser.netlify.app/offers)
+- 🧾 **Billing History:** [Click Here](https://subscriptionuser.netlify.app/Subscriptionhistory)
+- 🛠 **Admin Dashboard:** [Click Here](https://subscriptionadmin.netlify.app/) 
 
 ---
 
